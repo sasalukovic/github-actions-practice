@@ -1,0 +1,12 @@
+name: Push
+on: push
+jobs:
+  push:
+    runs-on: windows-latest
+    steps:
+      - name: Run Lint
+        run: npm run lint
+      - name: Run Test
+        run: npm run test
+      - name: Run build
+        run: npm run build
